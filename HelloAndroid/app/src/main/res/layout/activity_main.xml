@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            android:layout_margin="@dimen/logo_margin" />
+
+        <TextView
+            android:id="@+id/udacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company_name"
+            android:textColor="@color/colorUdacity"
+            android:textSize="@dimen/big_font_size"
+            android:layout_toRightOf="@id/logo"/>
+
+        <TextView
+            android:id="@+id/hiring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hiring"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_font_size"
+            android:layout_below="@id/logo"/>
+
+        <TextView
+            android:id="@+id/call"
+            android:text="@string/call"
+            android:layout_below="@id/hiring"
+            style="@style/GrayTexts"/>
+
+        <TextView
+            android:id="@+id/phone"
+            android:text="@string/phone"
+            android:layout_below="@id/call"
+            android:autoLink="phone"
+            android:drawableLeft="@drawable/phone_icon_s"
+            style="@style/UdacityTexts"/>
+
+        <TextView
+            android:id="@+id/visit"
+            android:text="@string/visit"
+            android:layout_below="@id/phone"
+            style="@style/GrayTexts"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:autoLink="map"
+            android:drawableLeft="@drawable/map_icon_s"
+            android:text="@string/address"
+            android:layout_below="@id/visit"
+            style="@style/UdacityTexts"/>
+
+        <TextView
+            android:id="@+id/check"
+            android:text="@string/check"
+            android:layout_below="@id/address"
+            style="@style/GrayTexts"/>
+
+        <TextView
+            android:id="@+id/webpage"
+            android:text="@string/webpage"
+            android:layout_below="@id/check"
+            android:autoLink="web"
+            android:drawableLeft="@drawable/web_icon_s"
+            style="@style/UdacityTexts"/>
+
+        <TextView
+            android:id="@+id/cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cat"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/env_font_size"
+            android:layout_margin="@dimen/small_margin"
+            android:layout_below="@id/webpage"/>
+
+    </RelativeLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/boss_kitty"
+        android:layout_weight="1" />
+
+</LinearLayout>
